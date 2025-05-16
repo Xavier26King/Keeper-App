@@ -8,4 +8,4 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/app";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root")); // Render the App component to the root element in the HTML file

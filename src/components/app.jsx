@@ -9,15 +9,15 @@ function App() {
   const [notes, setNotes] = useState([]);
   function addNote(newNote) {
     setNotes((prevValue) => {
-      return [...prevValue, newNote];
+      return [...prevValue, newNote]; // Spread operator to add new note
     });
-  }
+  } 
 
   function deleteNote(id) {
     setNotes((prevNotes) => {
       return prevNotes.filter((nodeItem, index) => {
         return index !== id;
-      });
+      }); // Filter out the note to be deleted
     });
   }
 
@@ -30,17 +30,17 @@ function App() {
         content={noteItem.content}
         onDelete={deleteNote}
       />
-    );
+    ); // Render each note 
   }
 
   return (
     <div>
       <Header />
-      <CreateArea OnAdd={addNote} />
-      {notes.map(notesRender)};
+      <CreateArea OnAdd={addNote} /> 
+      {notes.map(notesRender)}; 
       <Footer />
     </div>
-  );
+  ); // Map through notes and render each note
 }
 
 export default App;

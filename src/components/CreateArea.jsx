@@ -6,25 +6,26 @@ function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
     content: "",
-  });
+  }); // Using object destructuring to set the initial state of note
 
   function handleChange(event) {
     const { name, value } = event.target;
     setNote((prevValue) => {
       return {
         ...prevValue,
-        [name]: value,
+        [name]: value, // Using computed property names to set the value of the input field
       };
     });
-  }
+  } // Using object destructuring to get the name and value of the input field
+  // Using spread operator to update the state of note
 
   function submitNotes(event) {
-    props.OnAdd(note);
+    props.OnAdd(note); // Passing the note object to the parent component
     setNote({
       title: "",
       content: "",
-    });
-    event.preventDefault();
+    }); // Resetting the state of note after submission
+    event.preventDefault(); // Preventing the default behavior of the form submission
   }
 
   return (
@@ -32,13 +33,13 @@ function CreateArea(props) {
       <form>
         <input
           name="title"
-          onChange={handleChange}
+          onChange={handleChange} // OnChange event handler to update the state of note
           placeholder="Title"
-          value={note.title}
+          value={note.title} // Using object destructuring to get the value of the input field
         />
         <textarea
           name="content"
-          onChange={handleChange}
+          onChange={handleChange} 
           placeholder="Take a note..."
           rows="3"
           value={note.content}
