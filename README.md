@@ -18,25 +18,10 @@ A simple and elegant note-taking application built entirely with **React**. User
 
 ---
 
-## 📁 Project Structure
-
 ```
+## 📁 Project Structure
+![image](https://github.com/user-attachments/assets/ed262146-3fbd-4623-81db-a473fb3cc88d)
 
-.
-├── node\_modules/         # Dependencies (ignored in Git)
-├── public/               # Static files
-├── src/
-│   ├── components/       # All React components
-│   │   ├── App.jsx
-│   │   ├── CreateArea.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   └── Note.jsx
-│   └── index.jsx         # Entry point
-├── index.html            # HTML template
-├── package.json          # Project metadata and scripts
-├── vite.config.js        # Vite configuration
-└── README.md             # You are here!
 
 ````
 
